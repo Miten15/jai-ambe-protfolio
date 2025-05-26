@@ -76,6 +76,15 @@ export function Skills() {
       <div className="absolute bottom-16 right-8 animate-fade-in-right" style={{ animationDelay: "0.9s" }}>
         <IndianDecorative size={70} variant="paisley" />
       </div>
+      <div className="absolute top-1/2 left-5 -translate-y-1/2 animate-fade-in-left" style={{ animationDelay: "1.2s" }}>
+        <IndianDecorative size={60} variant="peacock" />
+      </div>
+      <div className="absolute top-1/4 right-1/3 animate-fade-in-right" style={{ animationDelay: "1.5s" }}>
+        <IndianDecorative size={50} variant="diya" />
+      </div>
+      <div className="absolute bottom-1/4 left-1/3 animate-fade-in-left" style={{ animationDelay: "1.8s" }}>
+        <IndianDecorative size={55} variant="swastika" />
+      </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         <SectionLoader delay={1000}>

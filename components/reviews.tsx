@@ -86,6 +86,24 @@ export function Reviews() {
       <div className="absolute bottom-16 right-8 animate-fade-in-right" style={{ animationDelay: "0.9s" }}>
         <IndianDecorative size={70} variant="rangoli" />
       </div>
+      <div className="absolute top-1/2 left-5 -translate-y-1/2 animate-fade-in-left" style={{ animationDelay: "1.2s" }}>
+        <IndianDecorative size={60} variant="border" />
+      </div>
+      <div className="absolute top-1/4 right-5 animate-fade-in-right" style={{ animationDelay: "1.5s" }}>
+        <IndianDecorative size={50} variant="om" />
+      </div>
+      <div className="absolute top-16 left-8 animate-fade-in-left">
+        <IndianDecorative size={90} variant="mandala" />
+      </div>
+      <div className="absolute top-20 right-12 animate-fade-in-right" style={{ animationDelay: "0.3s" }}>
+        <IndianDecorative size={75} variant="lotus" />
+      </div>
+      <div className="absolute bottom-20 left-16 animate-fade-in-left" style={{ animationDelay: "0.6s" }}>
+        <IndianDecorative size={65} variant="diya" />
+      </div>
+      <div className="absolute bottom-16 right-8 animate-fade-in-right" style={{ animationDelay: "0.9s" }}>
+        <IndianDecorative size={70} variant="rangoli" />
+      </div>
 
       {/* Floating testimonial decorations */}
       <div className="absolute top-1/3 left-1/3 animate-pulse" style={{ animationDelay: "1.2s" }}>

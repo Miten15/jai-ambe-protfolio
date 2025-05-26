@@ -105,6 +105,15 @@ export function Contact() {
       <div className="absolute bottom-1/3 left-20 animate-fade-in-left" style={{ animationDelay: "0.6s" }}>
         <IndianDecorative size={90} variant="mandala" />
       </div>
+      <div className="absolute top-20 right-1/3 animate-fade-in-right" style={{ animationDelay: "0.9s" }}>
+        <IndianDecorative size={60} variant="elephant" />
+      </div>
+      <div className="absolute bottom-20 left-1/3 animate-fade-in-left" style={{ animationDelay: "1.2s" }}>
+        <IndianDecorative size={70} variant="sun" />
+      </div>
+      <div className="absolute top-1/2 left-10 -translate-y-1/2 animate-fade-in-left" style={{ animationDelay: "1.5s" }}>
+        <IndianDecorative size={50} variant="vine" />
+      </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         <SectionLoader delay={2500}>
@@ -121,7 +130,7 @@ export function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
             {/* Contact Methods */}
             <div className="space-y-6">
-              <h3 className="text-fluid-2xl font-bold text-white mb-6 tracking-tight flex items-center gap-3">
+              <h3 className="text-fluid-2xl font-bold text-periwinkle2-400 mb-6 tracking-tight flex items-center gap-3">
                 <IndianDecorative size={20} variant="lotus" className="opacity-50" />
                 Get In Touch
               </h3>
@@ -382,7 +391,7 @@ export function Contact() {
                 </a>
               </div>
               <p className="text-gray-600 text-fluid-base flex items-center gap-2">
-                © 2024 Jai Ambe. Crafted with ❤️ and inspired by Indian heritage.
+                © 2025 Jai Ambe. Crafted with ❤️ and inspired by Indian heritage.
                 <IndianDecorative size={16} variant="lotus" className="opacity-40" />
               </p>
             </div>

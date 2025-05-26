@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Code, Palette, Smartphone, Globe } from "lucide-react"
 import { SectionLoader } from "@/components/section-loader"
+import { IndianDecorative } from "@/components/indian-decorative-elements"
 
 export function About() {
   const skills = [
@@ -27,8 +28,28 @@ export function About() {
   ]
 
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute top-10 left-10 text-periwinkle2-400 opacity-30 animate-fade-in-left">
+        <IndianDecorative variant="lotus" size={120} />
+      </div>
+      <div className="absolute bottom-10 right-10 text-periwinkle3-400 opacity-30 animate-fade-in-right">
+        <IndianDecorative variant="peacock" size={100} />
+      </div>
+      <div className="absolute top-1/2 left-5 transform -translate-y-1/2 text-periwinkle2-300 opacity-25 animate-fade-in-left" style={{ animationDelay: "0.3s" }}>
+        <IndianDecorative variant="floral" size={80} />
+      </div>
+      <div className="absolute top-1/4 right-20 text-periwinkle3-300 opacity-25 animate-fade-in-right" style={{ animationDelay: "0.6s" }}>
+        <IndianDecorative variant="elephant" size={90} />
+      </div>
+      <div className="absolute bottom-1/3 left-20 text-periwinkle2-300 opacity-25 animate-fade-in-left" style={{ animationDelay: "0.9s" }}>
+        <IndianDecorative variant="sun" size={70} />
+      </div>
+      <div className="absolute top-20 right-1/3 text-periwinkle3-400 opacity-20 animate-fade-in-right" style={{ animationDelay: "1.2s" }}>
+        <IndianDecorative variant="om" size={60} />
+      </div>
+      
+      <div className="max-w-7xl mx-auto relative z-10">
         <SectionLoader delay={500}>
           <div className="text-center mb-16">
             <h2 className="text-fluid-5xl font-bold mb-6 bg-gradient-to-r from-periwinkle2-300 to-periwinkle3-300 bg-clip-text text-transparent font-troy tracking-tight">

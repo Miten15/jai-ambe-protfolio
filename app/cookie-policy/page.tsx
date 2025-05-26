@@ -144,7 +144,7 @@ export default function CookiePolicy() {
               <CardTitle className="flex items-center gap-3 text-periwinkle2-300">
                 <Shield className="h-6 w-6" />
                 Your Consent
-                <IndianDecorative size={16} variant="paisley" className="opacity-40" />
+                < size={16} variant="paisley" className="opacity-40" />
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4 text-gray-600">

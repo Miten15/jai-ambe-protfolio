@@ -79,6 +79,15 @@ export function Process() {
       <div className="absolute bottom-10 right-12 animate-fade-in-right" style={{ animationDelay: "0.9s" }}>
         <IndianDecorative size={75} variant="diya" />
       </div>
+      <div className="absolute top-1/3 left-5 animate-fade-in-left" style={{ animationDelay: "1.2s" }}>
+        <IndianDecorative size={60} variant="elephant" />
+      </div>
+      <div className="absolute top-2/3 right-5 animate-fade-in-right" style={{ animationDelay: "1.5s" }}>
+        <IndianDecorative size={65} variant="vine" />
+      </div>
+      <div className="absolute bottom-1/3 left-1/3 animate-fade-in-left" style={{ animationDelay: "1.8s" }}>
+        <IndianDecorative size={50} variant="hamsa" />
+      </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         <SectionLoader delay={1500}>

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { ArrowDown } from "lucide-react"
 import { IndianPattern } from "@/components/indian-pattern"
+import { IndianDecorative } from "@/components/indian-decorative-elements"
 
 export function Hero() {
   return (
@@ -18,10 +19,16 @@ export function Hero() {
 
       {/* Decorative SVG Elements */}
       <div className="absolute top-20 left-10 opacity-20 text-periwinkle2-400 animate-fade-in-left">
-        <IndianPattern size={120} />
+        <IndianDecorative variant="peacock" size={120} />
       </div>
       <div className="absolute bottom-20 right-10 opacity-20 text-periwinkle3-400 animate-fade-in-right">
-        <IndianPattern size={100} />
+        <IndianDecorative variant="elephant" size={100} />
+      </div>
+      <div className="absolute top-1/3 right-20 opacity-15 text-periwinkle2-300 animate-fade-in-right" style={{ animationDelay: "0.3s" }}>
+        <IndianDecorative variant="sun" size={80} />
+      </div>
+      <div className="absolute bottom-1/3 left-20 opacity-15 text-periwinkle3-300 animate-fade-in-left" style={{ animationDelay: "0.5s" }}>
+        <IndianDecorative variant="om" size={60} />
       </div>
 
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">

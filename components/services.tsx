@@ -80,6 +80,12 @@ export function Services() {
       <div className="absolute bottom-32 left-20 animate-fade-in-left" style={{ animationDelay: "0.6s" }}>
         <IndianDecorative size={90} variant="paisley" />
       </div>
+      <div className="absolute bottom-10 right-10 animate-fade-in-right" style={{ animationDelay: "0.9s" }}>
+        <IndianDecorative size={70} variant="kalash" />
+      </div>
+      <div className="absolute top-1/2 left-5 -translate-y-1/2 animate-fade-in-left" style={{ animationDelay: "1.2s" }}>
+        <IndianDecorative size={60} variant="hamsa" />
+      </div>
       <div className="absolute bottom-16 right-12 animate-fade-in-right" style={{ animationDelay: "0.9s" }}>
         <IndianDecorative size={75} variant="diya" />
       </div>
