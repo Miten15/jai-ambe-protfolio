@@ -4,6 +4,18 @@ import { Card, CardContent } from "@/components/ui/card"
 import { IndianDecorative } from "@/components/indian-decorative-elements"
 import { Code, Palette, Smartphone, Globe, Zap, Users, CheckCircle, TrendingUp } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { 
+  FaReact, 
+  FaNodeJs, 
+  FaFigma
+} from "react-icons/fa"
+import { 
+  SiNextdotjs, 
+  SiTypescript, 
+  SiMongodb, 
+  SiTailwindcss,
+  SiFirebase 
+} from "react-icons/si"
 
 export function StreamlinedSkills() {
   const expertiseAreas = [
@@ -79,14 +91,14 @@ export function StreamlinedSkills() {
 
   // Technology stack with company logos
   const technologies = [
-    { id: 1, name: "React", logo: "/placeholder.svg?height=32&width=32", color: "border-blue-500" },
-    { id: 2, name: "Next.js", logo: "/placeholder.svg?height=32&width=32", color: "border-gray-800" },
-    { id: 3, name: "TypeScript", logo: "/placeholder.svg?height=32&width=32", color: "border-blue-600" },
-    { id: 4, name: "Node.js", logo: "/placeholder.svg?height=32&width=32", color: "border-green-600" },
-    { id: 5, name: "MongoDB", logo: "/placeholder.svg?height=32&width=32", color: "border-green-700" },
-    { id: 6, name: "Figma", logo: "/placeholder.svg?height=32&width=32", color: "border-purple-500" },
-    { id: 7, name: "Tailwind", logo: "/placeholder.svg?height=32&width=32", color: "border-cyan-500" },
-    { id: 8, name: "Firebase", logo: "/placeholder.svg?height=32&width=32", color: "border-orange-500" },
+    { id: 1, name: "React", icon: FaReact, color: "text-blue-500" },
+    { id: 2, name: "Next.js", icon: SiNextdotjs, color: "text-gray-800" },
+    { id: 3, name: "TypeScript", icon: SiTypescript, color: "text-blue-600" },
+    { id: 4, name: "Node.js", icon: FaNodeJs, color: "text-green-600" },
+    { id: 5, name: "MongoDB", icon: SiMongodb, color: "text-green-700" },
+    { id: 6, name: "Figma", icon: FaFigma, color: "text-purple-500" },
+    { id: 7, name: "Tailwind", icon: SiTailwindcss, color: "text-cyan-500" },
+    { id: 8, name: "Firebase", icon: SiFirebase, color: "text-orange-500" },
   ]
 
   const features = [
@@ -283,7 +295,7 @@ export function StreamlinedSkills() {
                       }}
                     >
                       <div className="m-auto">
-                        <img src={tech.logo || "/placeholder.svg"} alt={tech.name} className="w-6 h-6" />
+                        <tech.icon className={`w-6 h-6 ${tech.color}`} />
                       </div>
 
                       {/* Tooltip */}
