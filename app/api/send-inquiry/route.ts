@@ -1,7 +1,16 @@
 import { type NextRequest, NextResponse } from "next/server"
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+// Initialize Resend only when API key is available
+let resend: Resend | null = null
+
+// Initialize Resend instance only when needed
+function getResendInstance() {
+  if (!resend && process.env.RESEND_API_KEY) {
+    resend = new Resend(process.env.RESEND_API_KEY)
+  }
+  return resend
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -145,7 +154,12 @@ export async function POST(request: NextRequest) {
     `
 
     // Send email using Resend
-    const result = await resend.emails.send({
+    const resendInstance = getResendInstance()
+    if (!resendInstance) {
+      throw new Error('Email service not available')
+    }
+
+    const result = await resendInstance.emails.send({
       from: process.env.FROM_EMAIL!,
       to: process.env.TO_EMAIL!,
       subject: `🚀 New Project Inquiry: ${formData.projectType || "General Inquiry"} - ${formData.name}`,
@@ -208,7 +222,7 @@ export async function POST(request: NextRequest) {
     `
 
     // Send confirmation to client
-    await resend.emails.send({
+    await resendInstance.emails.send({
       from: process.env.FROM_EMAIL!,
       to: formData.email,
       subject: `✅ Project Inquiry Received - We'll be in touch within 24 hours!`,
