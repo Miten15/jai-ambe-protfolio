@@ -183,11 +183,12 @@ export function Reviews() {
                 </CardHeader>
 
                 <CardContent className="relative">
+                  {/* Quote decoration */}
+                  <div className="absolute -top-2 -left-2 opacity-20">
+                    <IndianDecorative size={16} variant="paisley" />
+                  </div>
                   <p className="text-gray-600 leading-relaxed italic text-fluid-sm relative">
-                    "{review.content}"{/* Quote decoration */}
-                    <div className="absolute -top-2 -left-2 opacity-20">
-                      <IndianDecorative size={16} variant="paisley" />
-                    </div>
+                    "{review.content}"
                   </p>
 
                   {/* Content border decoration */}

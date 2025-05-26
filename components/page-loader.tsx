@@ -38,77 +38,32 @@ export function PageLoader() {
       </div>
 
       <div className="relative z-10 text-center">
-        {/* Main Loader */}
+        {/* Main Loader - Section loader animation centered */}
         <div className="relative mb-8">
-          <div className="relative" style={{ perspective: "1000px" }}>
-            {/* Outer circle with Indian motifs */}
-            <div className="relative w-48 h-48 rounded-full border-2 border-periwinkle2-400 animate-loader-spin animate-loader-fade-in">
-              {/* Decorative dots around outer circle */}
-              {Array.from({ length: 12 }).map((_, i) => (
-                <div
-                  key={i}
-                  className="absolute w-2 h-2 bg-periwinkle3-400 rounded-full animate-pulse"
-                  style={{
-                    top: "50%",
-                    left: "50%",
-                    transform: `translate(-50%, -50%) rotate(${i * 30}deg) translateY(-96px)`,
-                    animationDelay: `${i * 0.1}s`,
-                  }}
-                />
-              ))}
+          <div className="flex justify-center items-center">
+            <div className="relative" style={{ perspective: "1000px" }}>
+              {/* Outer circle */}
+              <div className="relative w-32 h-32 rounded-full border border-periwinkle2-400 animate-loader-spin animate-loader-fade-in">
+                {/* Third circle */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-28 h-28 rounded-full border border-periwinkle3-400 animate-loader-glow">
+                  {/* Inner rectangle container */}
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 border border-dotted border-periwinkle2-400">
+                    {/* Mini circles at corners */}
+                    <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-3 h-3 rounded-full border-2 border-periwinkle3-400 animate-loader-glow"></div>
+                    <div className="absolute top-1/2 -left-2 transform -translate-y-1/2 w-3 h-3 rounded-full border-2 border-periwinkle3-400 animate-loader-glow"></div>
+                    <div className="absolute top-1/2 -right-2 transform -translate-y-1/2 w-3 h-3 rounded-full border-2 border-periwinkle3-400 animate-loader-glow"></div>
+                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-3 h-3 rounded-full border-2 border-periwinkle3-400 animate-loader-glow"></div>
 
-              {/* Second circle with dashed border */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 rounded-full border-2 border-dashed border-periwinkle2-500 animate-loader-inner-spin">
-                {/* Third circle with lotus petals effect */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full border-2 border-periwinkle3-400 animate-loader-glow">
-                  {/* Lotus petals */}
-                  {Array.from({ length: 8 }).map((_, i) => (
-                    <div
-                      key={i}
-                      className="absolute w-4 h-8 bg-gradient-to-t from-periwinkle2-400 to-periwinkle3-300 rounded-full opacity-60"
-                      style={{
-                        top: "50%",
-                        left: "50%",
-                        transform: `translate(-50%, -50%) rotate(${i * 45}deg) translateY(-48px)`,
-                        transformOrigin: "center bottom",
-                      }}
-                    />
-                  ))}
-
-                  {/* Section loader animation */}
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 scale-75">
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                      <div className="relative" style={{ perspective: "1000px" }}>
-                        {/* Outer circle */}
-                        <div className="relative w-32 h-32 rounded-full border border-periwinkle2-400 animate-loader-spin animate-loader-fade-in">
-                          {/* Second circle */}
-                          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-30 h-30 rounded-full border border-dashed border-periwinkle2-500">
-                            {/* Third circle */}
-                            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-28 h-28 rounded-full border border-periwinkle3-400 animate-loader-glow">
-                              {/* Inner rectangle container */}
-                              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 border border-dotted border-periwinkle2-400">
-                                {/* Mini circles at corners */}
-                                <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-3 h-3 rounded-full border-2 border-periwinkle3-400 animate-loader-glow"></div>
-                                <div className="absolute top-1/2 -left-2 transform -translate-y-1/2 w-3 h-3 rounded-full border-2 border-periwinkle3-400 animate-loader-glow"></div>
-                                <div className="absolute top-1/2 -right-2 transform -translate-y-1/2 w-3 h-3 rounded-full border-2 border-periwinkle3-400 animate-loader-glow"></div>
-                                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-3 h-3 rounded-full border-2 border-periwinkle3-400 animate-loader-glow"></div>
-
-                                {/* Inner rotating element */}
-                                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full border border-dotted border-periwinkle2-400 animate-loader-glow">
-                                  <div className="w-12 h-12 mx-auto mt-2 border border-periwinkle2-400 animate-loader-inner-spin">
-                                    <div className="w-12 h-12 border border-periwinkle2-400 transform rotate-45"></div>
-                                  </div>
-                                </div>
-
-                                {/* Center circles */}
-                                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full border border-periwinkle2-400 animate-loader-glow"></div>
-                                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full border-2 border-periwinkle3-400 animate-loader-glow"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                    {/* Inner rotating element */}
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full border border-dotted border-periwinkle2-400 animate-loader-glow">
+                      <div className="w-12 h-12 mx-auto mt-2 border border-periwinkle2-400 animate-loader-inner-spin">
+                        <div className="w-12 h-12 border border-periwinkle2-400 transform rotate-45"></div>
                       </div>
                     </div>
+
+                    {/* Center circles */}
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full border border-periwinkle2-400 animate-loader-glow"></div>
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full border-2 border-periwinkle3-400 animate-loader-glow"></div>
                   </div>
                 </div>
               </div>
