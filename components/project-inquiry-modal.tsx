@@ -31,8 +31,8 @@ export function ProjectInquiryModal({ isOpen, onClose, serviceTitle, servicePric
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  // Email configuration - UPDATE THIS WITH YOUR EMAIL
-  const NOTIFICATION_EMAIL = "jai.ambe@example.com" // 👈 CHANGE THIS TO YOUR EMAIL
+  // Email configuration - this will be handled by the API now
+  const NOTIFICATION_EMAIL = "work@jaiambe.studio" // This is just for display purposes
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -41,62 +41,10 @@ export function ProjectInquiryModal({ isOpen, onClose, serviceTitle, servicePric
     try {
       // Prepare email data
       const emailData = {
-        to: NOTIFICATION_EMAIL,
-        subject: `New Project Inquiry: ${formData.projectType || "General Inquiry"}`,
-        html: `
-          <h2>New Project Inquiry Received</h2>
-          
-          <h3>Client Information:</h3>
-          <ul>
-            <li><strong>Name:</strong> ${formData.name}</li>
-            <li><strong>Email:</strong> ${formData.email}</li>
-            <li><strong>Phone:</strong> ${formData.phone || "Not provided"}</li>
-            <li><strong>Company:</strong> ${formData.company || "Not provided"}</li>
-          </ul>
-          
-          <h3>Project Details:</h3>
-          <ul>
-            <li><strong>Project Type:</strong> ${formData.projectType}</li>
-            <li><strong>Budget Range:</strong> ${formData.budget || "Not specified"}</li>
-            <li><strong>Timeline:</strong> ${formData.timeline || "Not specified"}</li>
-            <li><strong>Service Price:</strong> ${servicePrice || "Custom quote"}</li>
-          </ul>
-          
-          <h3>Project Description:</h3>
-          <p>${formData.message}</p>
-          
-          <hr>
-          <p><em>This inquiry was submitted through your portfolio website.</em></p>
-          <p><strong>Next Steps:</strong></p>
-          <ol>
-            <li>Review the project requirements</li>
-            <li>Prepare a detailed proposal</li>
-            <li>Schedule a consultation call</li>
-            <li>Send response within 24 hours</li>
-          </ol>
-        `,
+        servicePrice: servicePrice,
       }
 
-      // Here you would typically send to your backend API
-      // For now, we'll simulate the API call
-      console.log("Sending email notification to:", NOTIFICATION_EMAIL)
-      console.log("Email data:", emailData)
-      console.log("Form data:", formData)
-
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 2000))
-
-      // In a real implementation, you would:
-      // 1. Send to your backend API endpoint
-      // 2. Your backend would send the email using a service like:
-      //    - Nodemailer
-      //    - SendGrid
-      //    - Mailgun
-      //    - Resend
-      //    - EmailJS (client-side option)
-
-      /*
-      Example API call:
+      // Send to API endpoint
       const response = await fetch('/api/send-inquiry', {
         method: 'POST',
         headers: {
@@ -106,12 +54,13 @@ export function ProjectInquiryModal({ isOpen, onClose, serviceTitle, servicePric
           formData,
           emailData,
         }),
-      });
+      })
+
+      const result = await response.json()
 
       if (!response.ok) {
-        throw new Error('Failed to send inquiry');
+        throw new Error(result.message || 'Failed to send inquiry')
       }
-      */
 
       setIsSubmitting(false)
       setIsSubmitted(true)
@@ -130,12 +79,14 @@ export function ProjectInquiryModal({ isOpen, onClose, serviceTitle, servicePric
           message: "",
         })
         onClose()
-      }, 3000)
+      }, 4000) // Increased to 4 seconds to show the success message longer
     } catch (error) {
       console.error("Error sending inquiry:", error)
       setIsSubmitting(false)
-      // You could show an error message here
-      alert("There was an error sending your inquiry. Please try again or contact us directly.")
+      
+      // Show user-friendly error message
+      const errorMessage = error instanceof Error ? error.message : "There was an error sending your inquiry. Please try again or contact us directly."
+      alert(errorMessage)
     }
   }
 
