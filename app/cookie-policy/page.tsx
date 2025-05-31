@@ -30,7 +30,7 @@ export default function CookiePolicy() {
             <p className="text-fluid-lg text-gray-600 max-w-2xl mx-auto">
               This policy explains how we use cookies and similar technologies on our website.
             </p>
-            <p className="text-periwinkle2-400 text-fluid-sm mt-4">Last updated: January 2024</p>
+            <p className="text-periwinkle2-400 text-fluid-sm mt-4">Last updated: January 2025</p>
           </div>
         </div>
 
@@ -144,7 +144,7 @@ export default function CookiePolicy() {
               <CardTitle className="flex items-center gap-3 text-periwinkle2-300">
                 <Shield className="h-6 w-6" />
                 Your Consent
-                < size={16} variant="paisley" className="opacity-40" />
+                <IndianDecorative size={16} variant="paisley" className="opacity-40" />
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4 text-gray-600">

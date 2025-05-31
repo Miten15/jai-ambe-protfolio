@@ -30,7 +30,7 @@ export default function TermsOfService() {
             <p className="text-fluid-lg text-gray-600 max-w-2xl mx-auto">
               These terms govern your use of our services. Please read them carefully before engaging our services.
             </p>
-            <p className="text-periwinkle2-400 text-fluid-sm mt-4">Last updated: January 2024</p>
+            <p className="text-periwinkle2-400 text-fluid-sm mt-4">Last updated: January 2025</p>
           </div>
         </div>
 
