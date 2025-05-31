@@ -24,10 +24,7 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-gradient-to-br from-periwinkle2-400 to-periwinkle3-400 rounded-full flex items-center justify-center animate-scale-in">
-              <span className="text-white font-bold text-sm">JA</span>
-            </div>
-            <span className="text-fluid-xl font-bold bg-gradient-to-r from-periwinkle2-300 to-periwinkle3-300 bg-clip-text text-transparent tracking-tight">
+            <span className="text-fluid-xl font-bold bg-gradient-to-r from-periwinkle2-300 to-periwinkle3-300 bg-clip-text text-transparent tracking-tight font-troy">
               Jai Ambe
             </span>
           </div>

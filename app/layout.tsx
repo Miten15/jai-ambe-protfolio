@@ -58,8 +58,7 @@ export const metadata: Metadata = {
     description: "Crafting beautiful digital experiences with Indian artistry",
     images: ["/og-image.jpg"],
     creator: "@jaiambe",
-  },
-  robots: {
+  },  robots: {
     index: true,
     follow: true,
     googleBot: {
@@ -70,15 +69,21 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-    generator: 'v0.dev'
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' },
+      { url: '/favicon.svg', type: 'image/svg+xml' }
+    ],
+    apple: '/favicon.svg',
+  },
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
-}) {
-  return (
+}) {  return (
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -88,8 +93,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
         <link href="https://fonts.cdnfonts.com/css/troy-sans" rel="stylesheet" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        {/* Favicon configuration */}
+        <link rel="icon" href="/favicon.ico" sizes="32x32" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/favicon.svg" />
         <meta name="theme-color" content="#ACB5F7" />
         <script
           type="application/ld+json"
