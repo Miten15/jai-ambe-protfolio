@@ -116,8 +116,8 @@ export default function RootLayout({
                 addressRegion: "Maharashtra",
                 addressCountry: "India",
               },
-              email: "jai.ambe@example.com",
-              telephone: "+91 98765 43210",
+              email: "jaiambe@gmail.com",
+              telephone: "+91 9766082403",
             }),
           }}
         />
