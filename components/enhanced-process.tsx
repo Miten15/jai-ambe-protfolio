@@ -337,12 +337,11 @@ export function EnhancedProcess() {
                   <EvervaultCard
                     className="h-64"
                     onClick={() => setSelectedPhase(phase.id)}
-                    indianTheme={phase.indianTheme}
                     phaseTitle={phase.title}
                   >
                     <div className="space-y-4">
                       {/* Icon */}
-                      <div className="text-periwinkle2-400 mb-4">{phase.icon}</div>
+                      <div className="text-periwinkle2-400 mb-4 flex items-center justify-center">{phase.icon}</div>
 
                       {/* Phase Title */}
                       <h3 className="text-2xl font-bold text-gray-800 mb-2">{phase.phase}</h3>
@@ -374,7 +373,7 @@ export function EnhancedProcess() {
               </div>
 
               <div className="relative z-10 text-center">
-                <h3 className="text-fluid-2xl font-bold text-white mb-4 tracking-tight">
+                <h3 className="text-fluid-2xl font-bold text-periwinkle-400 mb-4 tracking-tight text-shadow-lg">
                   Ready to Start Your Project?
                 </h3>
                 <p className="text-periwinkle-200 mb-6 text-fluid-base max-w-2xl mx-auto">
@@ -384,13 +383,13 @@ export function EnhancedProcess() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
                     href="#contact"
-                    className="inline-flex items-center justify-center px-8 py-3 bg-white text-periwinkle2-400 font-semibold rounded-md hover:bg-periwinkle-100 transition-all duration-300 text-fluid-base"
+                    className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-periwinkle2-400 to-periwinkle3-400 text-white font-semibold rounded-lg hover:from-periwinkle2-300 hover:to-periwinkle3-300 transform hover:scale-105 transition-all duration-300 text-fluid-base shadow-lg"
                   >
                     Start Your Project
                   </a>
                   <a
-                    href="tel:+919876543210"
-                    className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white font-semibold rounded-md hover:bg-white hover:text-periwinkle2-400 transition-all duration-300 text-fluid-base"
+                    href="tel:+919766082403"
+                    className="inline-flex items-center justify-center px-8 py-3 bg-transparent border-2 border-periwinkle3-400 text-periwinkle3-400 font-semibold rounded-lg hover:bg-white hover:text-periwinkle3-400 transform hover:scale-105 transition-all duration-300 text-fluid-base shadow-lg"
                   >
                     Call Now
                   </a>

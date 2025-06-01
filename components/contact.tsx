@@ -61,15 +61,15 @@ export function Contact() {
     {
       icon: Phone,
       title: "Phone",
-      content: "+91 98765 43210",
-      action: "tel:+919876543210",
+      content: "+91 97660 82403",
+      action: "tel:+919766082403",
       description: "Quick calls and consultations",
     },
     {
       icon: MessageSquare,
       title: "WhatsApp",
       content: "Chat on WhatsApp",
-      action: "https://wa.me/919876543210",
+      action: "https://wa.me/919766082403",
       description: "Instant messaging and file sharing",
     },
     {

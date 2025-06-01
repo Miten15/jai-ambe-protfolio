@@ -107,3 +107,13 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: theme("colors.periwinkle2.300");
 }
+
+/* Text shadow utility for text stroke/border effect */
+.text-shadow-lg {
+  text-shadow: 
+    -1px -1px 0 rgba(255, 255, 255, 0.5),
+    1px -1px 0 rgba(255, 255, 255, 0.5),
+    -1px 1px 0 rgba(255, 255, 255, 0.5),
+    1px 1px 0 rgba(255, 255, 255, 0.5),
+    0 0 5px rgba(255, 255, 255, 0.3);
+}
